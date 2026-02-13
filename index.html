@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            background-color: black;
+            color: crimson;
+            font-family: Arial, sans-serif;
+            animation: fadeIn 5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        /* Add additional styles for photo carousel, games, etc. */
+    </style>
+    <script>
+        // Slow text animation script can be added here
+        function typeWriter(element, text, i) {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                setTimeout(() => typeWriter(element, text, i + 1), 100);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <script>
+        typeWriter(document.getElementById('title'), 'Happy Valentine’s Day!', 0);
+    </script>
+    <section class="carousel">
+        <h2>Photo Carousel</h2>
+        <!-- Add carousel images and functionality here -->
+    </section>
+    <section class="mini-games">
+        <h2>Mini Games</h2>
+        <!-- Include mini-games here -->
+    </section>
+    <section class="interactive-proposal">
+        <h2>Interactive Proposal</h2>
+        <p>Will you marry me?</p>
+        <!-- Decorative elements can be added here with images of roses and lilies -->
+    </section>
+</body>
+</html>
