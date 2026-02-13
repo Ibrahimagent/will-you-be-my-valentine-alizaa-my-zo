@@ -1,1 +1,64 @@
-<!DOCTYPE html>\n<html lang='en'>\n<head>\n    <meta charset='UTF-8'>\n    <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n    <title>Will You Be My Valentine?</title>\n    <style>\n        body { font-family: Arial, sans-serif; background-color: black; color: crimson; }\n        .carousel { display: flex; overflow: hidden; }\n        .carousel img { width: 100%; height: auto; }\n        .game { margin: 20px; }\n        button { background-color: crimson; color: white; border: none; padding: 10px 20px; cursor: pointer; }\n    </style>\n</head>\n<body>\n    <div id='loveLetter' class='love-letter'>\n        <p>Dear Love,</p>\n        <p>I cherish every moment with you. This Valentine\u2019s Day, I want to create a hundred memories together.</p>\n        <p>Will you be my Valentine?</p>\n    </div>\n    <div class='carousel'>\n        <img src='image1.jpg' alt='Love Image 1'>\n        <img src='image2.jpg' alt='Love Image 2'>\n        <img src='image3.jpg' alt='Love Image 3'>\n        <img src='image4.jpg' alt='Love Image 4'>\n        <img src='image5.jpg' alt='Love Image 5'>\n    </div>\n    <div class='game'>\n        <h2>Mini Game: Choose Your Path</h2>\n        <button onclick='playGame(true)'>Yes</button>\n        <button onclick='playGame(false)'>No</button>\n    </div>\n    <script>\n        function playGame(answer) {\n            if (answer) {\n                alert('You chose YES!');\n            } else {\n                alert('You chose NO!');\n            }\n        }\n    </script>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Proposal</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+        h1 {
+            color: crimson;
+        }
+        .carousel,
+        .games,
+        .proposal {
+            margin: 20px;
+            padding: 20px;
+            border: 3px solid crimson;
+            border-radius: 15px;
+            background-color: rgba(255, 192, 203, 0.2);
+        }
+        .flowers {
+            background-image: url('path_to_roses_and_lilies_image.jpg');
+            height: 300px;
+            background-size: cover;
+            position: relative;
+        }
+        .confetti {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will You Be My Valentine?</h1>
+    <div class="flowers"></div>
+    <div class="carousel">
+        <h2>Love Stories Carousel</h2>
+        <!-- Carousel Content -->
+    </div>
+    <div class="games">
+        <h2>Fun Games</h2>
+        <!-- Games Content -->
+    </div>
+    <div class="proposal">
+        <h2>Interactive Proposal Section</h2>
+        <button id="proposeButton">Propose</button>
+        <div class="confetti" id="confettiEffect">🎉</div>
+    </div>
+    <script>
+        document.getElementById('proposeButton').onclick = function() {
+            var confirmation = confirm('Will you be my Valentine?');
+            if (confirmation) {
+                document.getElementById('confettiEffect').style.display = 'block';
+                alert('Yay! She said yes!');
+            } else {
+                alert('Maybe next time!');
+            }
+        };
+    </script>
+</body>
+</html>
